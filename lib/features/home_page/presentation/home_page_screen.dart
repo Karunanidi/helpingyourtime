@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:get/get.dart';
 // import 'package:permission_handler/permission_handler.dart';
 import 'package:helpyourtime/components/custom_text.dart';
 import 'package:helpyourtime/components/my_text_field.dart';
 import 'package:helpyourtime/features/home_page/models/task_model.dart';
+import 'package:helpyourtime/features/setting_page/presentation/setting_page.dart';
 import 'package:helpyourtime/services/database_services.dart';
 
 class HomePageScreen extends StatefulWidget {
@@ -133,6 +135,14 @@ class _HomePageScreenState extends State<HomePageScreen> {
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Get.to(() => const SettingsPage());
+            },
+            icon: const Icon(Icons.settings),
+          ),
+        ],
       ),
       body: Center(
         child: Column(

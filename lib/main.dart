@@ -5,7 +5,7 @@ import 'package:helpyourtime/features/home_page/presentation/home_page_screen.da
 
 void main() {
   runApp(const MyApp());
-} 
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
